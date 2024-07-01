@@ -6,7 +6,7 @@ import br.gov.sp.fatec.domain.response.ClienteResponse;
 import java.util.List;
 
 public interface ClienteService {
-    ClienteResponse save(ClienteRequest clienteRequest);
+    ClienteResponse save(ClienteRequest ClienteRequest);
 
     ClienteResponse findById(Long id);
 

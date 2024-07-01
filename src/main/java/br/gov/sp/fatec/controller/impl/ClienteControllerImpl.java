@@ -18,7 +18,7 @@ public class ClienteControllerImpl implements ClienteController {
 
     @Override
     public ResponseEntity<ClienteResponse> save(ClienteRequest cliente) {
-        return null;
+        return ResponseEntity.ok(clienteService.save(cliente));
     }
 
     @Override
