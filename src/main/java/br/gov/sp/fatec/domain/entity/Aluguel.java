@@ -26,9 +26,9 @@ public class Aluguel {
     @Enumerated(value = EnumType.STRING)
     private AluguelStatus status;
 
-    @OneToOne
+    @ManyToOne
     private Carro carro;
 
-    @OneToOne
+    @ManyToOne
     private Cliente cliente;
 }

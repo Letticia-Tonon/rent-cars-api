@@ -18,26 +18,28 @@ public class AluguelControllerImpl implements AluguelController {
 
     @Override
     public ResponseEntity<AluguelResponse> save(AluguelRequest aluguel) {
-        return null;
+        return ResponseEntity.ok(aluguelService.save(aluguel));
     }
 
     @Override
     public ResponseEntity<AluguelResponse> findById(Long id) {
-        return null;
+        return ResponseEntity.ok(aluguelService.findById(id));
     }
 
     @Override
     public ResponseEntity<List<AluguelResponse>> findAll() {
-        return null;
+        return ResponseEntity.ok(aluguelService.findAll());
     }
 
     @Override
     public ResponseEntity<Void> updateById(Long id, AluguelUpdateRequest request) {
-        return ResponseEntity.noContent().build();
+        aluguelService.updateById(id, request);
+        return ResponseEntity.ok().build();
     }
 
     @Override
     public ResponseEntity<Void> deleteById(Long id) {
+        aluguelService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }
